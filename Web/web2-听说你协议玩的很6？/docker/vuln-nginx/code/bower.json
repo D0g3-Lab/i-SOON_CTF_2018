@@ -1,0 +1,9 @@
+{
+  "name": "skillock",
+  "private": true,
+  "dependencies": {
+    "jquery": "2.1.3",
+    "requirejs": "2.1.16",
+    "knockout": "2.3.0"
+  }
+}

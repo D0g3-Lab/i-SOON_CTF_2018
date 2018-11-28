@@ -1,0 +1,34 @@
+
+@error_reporting(0);
+
+$flag = "flag{xxxxxxxxxxxxxxxxxxxxxxxxxxxx}";
+$secret_key = "xxxxxxxxxxxxxxxx"; // the key is safe! no one can know except me
+
+$username = $_POST["username"];
+$password = $_POST["password"];
+header("hash_key:" . $hash_key);
+
+if (!empty($_COOKIE["getflag"])) {
+    if (urldecode($username) === "D0g3" && urldecode($password) != "D0g3") {
+        if ($COOKIE["getflag"] === md5($secret_key . urldecode($username . $password))) {
+            echo "Great! You're in!\n";
+            die ("<!-- The flag is ". $flag . "-->");
+        }
+        else {
+            die ("Go out! Hacker!");
+        }
+    }
+    else {
+        die ("LEAVE! You're not one of us!");
+    }
+}
+
+setcookie("sample-hash", md5($secret_key . urldecode("D0g3" . "D0g3")), time() + (60 * 60 * 24 * 7));
+
+if (empty($_COOKIE["source"])) {
+    setcookie("source", 0, time() + (60 * 60 * 24 * 7));
+}
+else {
+    echo "<source_code>";
+    }
+}

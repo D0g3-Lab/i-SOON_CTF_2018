@@ -1,0 +1,33 @@
+,{
+			"books": [{
+					"label": "book1",
+					"url": ""
+				}, {
+					"label": "book2",
+					"url": ""
+				}
+			],
+			"dependsOn": [],
+			"description": "描述",
+			"id": 0,
+			"links": [{
+					"label": "link1",
+					"url": ""
+				}, {
+					"label": "link2",
+					"url": ""
+				}
+			],
+			"maxPoints": 2,
+			"rankDescriptions": ["1点描述", "2点描述"],
+			"stats": [{
+					"title": "坚韧",
+					"value": 2
+				}, {
+					"title": "灵巧",
+					"value": 1
+				}
+			],
+			"talents": ["习得技能"],
+			"title": "技能点1"
+		}
